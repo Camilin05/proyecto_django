@@ -8,13 +8,24 @@
     {% block content %}
     <div class="nav">
         <h1>Detalles sobre el usuario</h1>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/members/add">Añadir miembro</a></li>
+            <li><a href="/sobre">Acerca de </a></li>
     </div>
     <div class="contenido">
-        <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
-
-        <p>Celular {{ mymember.phone }}</p>
-        <p>Fecha de registro {{ mymember.joined_date }}</p>
-
-        <p>Volver a <a href="/members">Members</a></p>
+        <section class="detalles_usuario">
+            <h1>Detalles del usuario</h1>
+                <h2>{{ mymember.firstname }} {{ mymember.lastname }}</h2>
+                <section class="imagen_usuario">
+                    <img src="{{ mymember.image.url }}" alt="Imagen del usuario" width="200px" height="200px">
+                </section>
+                    <p>Fecha de registro: {{ mymember.joined_date }}</p>
+                        <p>Celular: {{ mymember.phone }}</p>   
+                        <br>                     
+                            <p>Volver a <a href="/members">Members</a></p>
+        </section>
     </div>
+    <footer>
+        <p>© 2023 Mi club de tenis. Todos los derechos reservados.</p>
     {% endblock%}

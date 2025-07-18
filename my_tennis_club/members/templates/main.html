@@ -6,28 +6,33 @@
 
 
 {% block content %}
-    <div class="nav">
-        <h1>Mi club de tenis</h1>
-        <ul>
-            <li><a href="/help">Ayuda</a></li>
-            <li><a href="/members/add">Añadir miembro</a></li>
-            <li><a href="/sobre">Acerca de </a></li>
-        </ul>
-    </div>
-    <div class="contenido_detalles">
-        <div class="sub_contenido">
-        <h1>Mi club de tenis</h1>
-        <h2>Bienvenido a nuestro club de tenis</h2>
-        <p>Explora nuestras instalaciones y conoce a nuestros miembros.</p>
-        
-    
-
-    <h3>Miembros</h3>
-
-    <p>Echa un vistazo a todas nuestras<a href="members/">miembros</a></p>
+    <header>
+        <div class="nav">
+            <h1>Club de tenis - CAMILO</h1>
+            <ul>
+                <li><a href="/help">Ayuda</a></li>
+                <li><a href="/members/add">Añadir miembro</a></li>
+                <li><a href="/sobre">Acerca de </a></li>
+            </ul>
         </div>
-        
+    </header>
+    <div class="contenido">
+        <div class="introduccion">
+            <h2>Mi club de tenis</h2>
+                <div class="image_club">
+                    <img src="https://dyl347hiwv3ct.cloudfront.net/app/uploads/2024/02/renith-r-MLU_X1d3ofQ-unsplash.jpg" alt="Imagen de tenis">
+                </div>
+                    <h3>Bienvenido a nuestro club de tenis, explora nuestras instalaciones y conoce a nuestros miembros.</h3>
+                        </div>
+                            <section class="enlace_miembros">
+                                <a href="members/"> AQUI LOS MIEMBROS</a>
+                            </section>
+                                    <div class="historia">
+                                        <h2>Nuestra historia</h2>
+                                            <img src="https://cdn0.uncomo.com/es/posts/7/9/4/los_mejores_jugadores_de_tenis_de_la_historia_53497_orig.jpg" alt="Imagen de tenis" width="550px">
+                                                <p>Fundado en 2023, nuestro club de tenis ha crecido rápidamente, ofreciendo un espacio para los entusiastas del tenis de todas las edades y niveles.</p>
+                                    </div>
     </div>
-    <footer>
-        <p>© 2023 Mi club de tenis. Todos los derechos reservados.</p>
+        <footer>
+            <p>© 2023 Mi club de tenis. Todos los derechos reservados.</p>
 {% endblock %}
