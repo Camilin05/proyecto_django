@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+{% block title %}
+    Mi club de tenis - Página de prueba
+{% endblock %}
+
+{% block content %}
+    <div class="contenido">
+        <div class="contenido_testing">
+            <h1>Prueba de plantilla</h1>
+                <p>Esta es una página de prueba para verificar el funcionamiento de las plantillas.</p>
+                    {% for x in aprendices %}
+                        <h1>{{ x }}</h1>
+                    {% endfor %}
+                <p>En views.py puedes ver cómo se ve la variable frutas.</p>
+        </div>
+    </div>
+{% endblock%}
