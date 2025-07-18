@@ -1,0 +1,20 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Sobre los detalles de cada usuario {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+
+    {% block content %}
+    <div class="nav">
+        <h1>Detalles sobre el usuario</h1>
+    </div>
+    <div class="contenido">
+        <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+
+        <p>Celular {{ mymember.phone }}</p>
+        <p>Fecha de registro {{ mymember.joined_date }}</p>
+
+        <p>Volver a <a href="/members">Members</a></p>
+    </div>
+    {% endblock%}

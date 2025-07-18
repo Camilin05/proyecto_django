@@ -1,0 +1,38 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Mi club de tenis - Todos los miembros
+{% endblock %}
+{% block content %}
+    <div class="nav">
+        <h1>Mi club de tenis</h1>
+        <ul>
+            
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/members/add">Añadir miembro</a></li>
+            <li><a href="/sobre">Acerca de </a></li>
+    </div>
+    <div class="contenido">
+        <div class="image_club">
+            <h2> Nuestro club</h2>
+        <img src="https://www.clubelrancho.com/img/02-tenis.jpg" alt="Imagen de tenis" width="550px">
+        </div>
+        <div class="miembros">
+        <h2>Miembros</h2>    
+        <div class="miembros_list">
+        <ul>
+        {% for x in mymembers %}
+            <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+        {% endfor %}
+        </ul>
+        </div>
+        </div>
+        <div class="image_club">
+            <h2>Imagen de tenis</h2>
+            
+        <img src="https://bogota.gov.co/sites/default/files/2021-11/close-up-tennis-rackets-and-balls-on-the-ground.jpg" alt="Imagen de tenis">
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 Mi club de tenis. Todos los derechos reservados.</p>
+    {% endblock %}
